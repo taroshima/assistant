@@ -1,4 +1,3 @@
-
 # AI Voice Assistant with Wake Word Activation
 
 A Python-based voice assistant that activates with a wake word, listens to your voice commands, transcribes speech using Whisper, generates intelligent responses using Google's Gemini API, and replies using text-to-speech.
@@ -43,6 +42,7 @@ ACCESS_KEY=your_porcupine_access_key
 GEMINI_API_KEY=your_gemini_api_key
 ```
 
+> ⚠️ **Note:** You will need to create your own custom wake word using [Picovoice Console](https://console.picovoice.ai/) and download the model. Save it inside a folder in your project (e.g., `chop-chop_en_windows_v3_0_0/`).
 
 ---
 
@@ -55,7 +55,7 @@ GEMINI_API_KEY=your_gemini_api_key
 ├── requirements.txt            # All dependencies
 ├── command.wav                 # Temporary voice input file
 ├── stop_check.wav              # Optional sound file
-├── chop-chop_en_windows_v3_0_0/  # Wake word model
+├── chop-chop_en_windows_v3_0_0/  # Wake word model (you must generate your own)
 ├── assistant.log               # Optional log file
 └── .gitignore                  # Prevents leaking secrets
 ```
@@ -70,7 +70,7 @@ Double-click `launch_assistant.pyw` (if you're on Windows), or run:
 python my_assistant.py
 ```
 
-Then say **"chop chop"** to activate the assistant and speak your command.
+Then say **"chop chop"** (or your custom wake word) to activate the assistant and speak your command.
 
 Say **"shut down"**, **"exit"**, or **"goodbye"** to stop the assistant.
 
@@ -79,7 +79,7 @@ Say **"shut down"**, **"exit"**, or **"goodbye"** to stop the assistant.
 ## Troubleshooting
 
 - *Wake word not detected?*  
-  Make sure your microphone is active and selected.
+  Make sure your microphone is active and selected. Verify your wake word model is valid and in the correct folder.
 
 - *TTS not working?*  
   Check your system volume and Python `pyttsx3` voice settings.
@@ -98,6 +98,3 @@ Say **"shut down"**, **"exit"**, or **"goodbye"** to stop the assistant.
 - [pyttsx3 for TTS](https://pyttsx3.readthedocs.io/en/latest/)
 
 ---
-
-
-

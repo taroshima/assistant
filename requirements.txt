@@ -1,0 +1,9 @@
+pvporcupine
+pyaudio
+numpy
+sounddevice
+webrtcvad
+openai-whisper
+pyttsx3
+google-generativeai
+python-dotenv

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.log
+
+.env
+
+*.wav
+
+.DS_Store
+Thumbs.db
+
+
+
+chop-chop_en_windows_v3_0_0/
